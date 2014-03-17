@@ -30,3 +30,8 @@ Calculating word scores (“special” spaces, blank tiles, & the letter-point h
 There is a problem with transferring strings in which part of the string gest cut off; I thus need to debug it.
 
 However, some of the functionality can be seen by running the various makefiles. Given the implementation, turning the code into a workable board game shouldn't be too difficult. However, I need to debug the string copying, etc., first. I severely overestimated the simplicity of creating such a program in C, given my skill level. 
+
+
+run:
+make -f makefile.trie_demo
+make
