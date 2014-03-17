@@ -1,0 +1,24 @@
+# Makefile to demo trie
+
+SRC=demo_trie.c trie.c
+OBJ=demo_trie.o trie.o
+
+CFLAGS= -std=c99
+
+demo: ${OBJ} 
+	gcc ${CFLAGS} ${OBJ} -o demo
+
+depend:
+	makedepend -Y ${SRC} &> /dev/null
+
+clean:
+	rm -f ${OBJ} scrabble
+
+install: demo
+	cp demo ~/bin
+
+# DO NOT DELETE.
+
+trie.o: trie.h
+
+demo_trie.o: trie.h 
